@@ -20,6 +20,13 @@ public:
     EulerAngles quaternionToEuler(Quaternion q);
 
     /*
+    Completely reset stored quaternion, returning to initial conditions (1, 0, 0, 0)
+    DO NOT USE IN FLIGHT FOR THE LOVE OF GOD
+    */
+    void zero() { orientation.a = 1; orientation.b = 0; orientation.c = 0; orientation.d = 0; };
+    void reset() { this.zero() };
+
+    /*
     IMPORTANT NOTES FOR UPDATE FUNCTION:
     dt is measured in seconds
     Conversion from milliseconds to seconds is / 1,000, microseconds to seconds is / 1,000,000
