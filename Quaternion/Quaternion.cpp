@@ -63,12 +63,12 @@ const Quaternion Quaternion::from_euler_rotation(float yaw, float pitch, float r
 }
 
 const Quaternion Quaternion::from_euler_rotation_approx(float yaw, float pitch, float roll) {
-    // approximage cos(theta) as 1 - theta^2 / 2
-    float cy = 1 - (yaw * yaw / 2);
-    float cp = 1 - (pitch * pitch / 2);
-    float cr = 1 - (roll * roll / 2);
+    // approximage cos(theta/2) as 1 - theta^2 / 8 (1 - theta^2 / 2 * 1/2^2)
+    float cy = 1 - ((yaw * yaw) / 8);
+    float cp = 1 - ((pitch * pitch) / 8);
+    float cr = 1 - ((roll * roll) / 8);
 
-    // appromixate sin(theta) as theta
+    // appromixate sin(theta/2) as theta/2
     float sy = yaw/2;
     float sp = pitch/2;
     float sr = roll/2;
