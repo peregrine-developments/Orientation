@@ -24,7 +24,7 @@ public:
     DO NOT USE IN FLIGHT FOR THE LOVE OF GOD
     */
     void zero() { orientation.a = 1; orientation.b = 0; orientation.c = 0; orientation.d = 0; };
-    void reset() { this.zero() };
+    void reset() { this->zero(); };
 
     /*
     IMPORTANT NOTES FOR UPDATE FUNCTION:
