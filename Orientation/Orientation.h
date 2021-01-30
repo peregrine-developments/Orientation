@@ -41,6 +41,8 @@ public:
     */
     void update(float yaw, float pitch, float roll, float dt);
     void update(EulerAngles gyroMeasure, float dt);
+    void updateOld(float yaw, float pitch, float roll, float dt);
+    void updateOld(EulerAngles gyroMeasure, float dt);
     void updateApprox(float yaw, float pitch, float roll, float dt);
     void updateApprox(EulerAngles gyroMeasure, float dt);
 

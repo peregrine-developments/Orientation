@@ -23,6 +23,9 @@ public:
     // This is like from_euler_rotation but for small angles (less than 45 deg (PI/4))
     static const Quaternion from_euler_rotation_approx(float yaw, float pitch, float roll);
 
+    // These should hopefully give better results (less jank)
+    static const Quaternion from_axis_angle(float angle, float x, float y, float z);
+
     Quaternion & operator=(const Quaternion &rhs) {
         a = rhs.a;
         b = rhs.b;
