@@ -50,9 +50,9 @@ void loop()
     
     // Example use
     Serial.print("Yaw: ");
-    Serial.print(oriMeasure.yaw);
+    Serial.print(oriMeasure.yaw * RAD_TO_DEG);
     Serial.print(", Pitch: ");
-    Serial.print(oriMeasure.pitch);
+    Serial.print(oriMeasure.pitch * RAD_TO_DEG);
     Serial.print(", Roll: ");
-    Serial.println(oriMeasure.roll);
+    Serial.println(oriMeasure.roll * RAD_TO_DEG);
 }
