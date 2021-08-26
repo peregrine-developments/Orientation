@@ -6,7 +6,7 @@
 Quaternion & Quaternion::operator*=(const Quaternion &q) {
     Quaternion ret;
     ret.a = a*q.a - b*q.b - c*q.c - d*q.d;
-    ret.b = b*q.a + a*q.b + c*q.d - d*q.c;
+    ret.b = a*q.b + b*q.a + c*q.d - d*q.c;
     ret.c = a*q.c - b*q.d + c*q.a + d*q.b;
     ret.d = a*q.d + b*q.c - c*q.b + d*q.a;
     return (*this = ret);
